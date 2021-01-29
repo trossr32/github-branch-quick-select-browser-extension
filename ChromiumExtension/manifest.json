@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "GitHub pull request branch quick select",
-  "description": "Adds a configurable branch quick select menu next to the branch drop down on a GitHub pull request.",
+  "description": "Reorders branch drop-downs on a GitHub pull request by moving optional favourite branches to the top of the list.",
   "version": "1.0.1.0",
   "browser_action": {
     "default_icon": "content/assets/images/gprbqs128.png",
