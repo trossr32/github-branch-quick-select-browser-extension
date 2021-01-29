@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub pull request branch quick select options</title>
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="content/css/options.css" />
+    <script src="content/js/jquery-3.5.1.min.js"></script>
+    <script src="content/js/bootstrap.bundle.min.js"></script>
+    <script src="content/js/bootstrap4-toggle.min.js"></script>
+    <script src="content/js/font-awesome_all.min.js"></script>
+    <script src="content/js/core.js"></script>
+    <script src="content/js/options.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row" style="margin: 20px 0 35px 0;">
+        <div class="col-1">
+            <img src="content/assets/images/gprbqs48.png" style="margin-right: 10px;" />
+        </div>
+    </div>
+
+    <ul class="nav nav-tabs" id="settingsTabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="basic-tab" data-bs-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-selected="true">
+                <i class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;Settings
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="debug-tab" data-bs-toggle="tab" href="#debug" role="tab" aria-controls="debug" aria-selected="false">
+                <i class="fa fa-bug"></i>&nbsp;&nbsp;&nbsp;Debug
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="github-tab" data-bs-toggle="tab" href="#github" role="tab" aria-controls="github" aria-selected="false">
+                <i class="fab fa-github"></i>&nbsp;&nbsp;&nbsp;Github
+            </a>
+        </li>
+    </ul>
+        
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
+            <h4 class="mb-5">Branches to include in pinned menu</h5>
+            
+            <form id="generalOptionsForm"></form>
+        </div>
+        <div class="tab-pane fade" id="debug" role="tabpanel" aria-labelledby="debug-tab">
+            <form id="debugOptionsForm"></form>
+        </div>
+        <div class="tab-pane fade" id="github" role="tabpanel" aria-labelledby="github-tab">
+            <div class="row justify-content-md-center">
+                <div class="col-10" style="text-align: center">
+                    <h2 style="margin-bottom: 45px;">GitHub</h2>
+                    <h5 style="margin-bottom: 45px;">
+                        <a href="https://github.com/trossr32/github-pull-request-branch-quick-select-browser-extension">github.com/trossr32/github-pull-request-branch-quick-select-browser-extension</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
