@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 var setEnabledDisabledButtonState = async (settings) => {
     $('#toggleActive').removeClass('btn-success btn-danger').addClass('btn-' + (settings.enabled ? 'danger' : 'success'));
     $('#toggleActive').html('<i class="fas fa-power-off"></i>&nbsp;&nbsp;&nbsp;&nbsp;' + (settings.enabled ? 'Disable' : '&nbsp;Enable'));

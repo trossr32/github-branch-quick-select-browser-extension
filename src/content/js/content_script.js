@@ -1,5 +1,7 @@
+/* jshint esversion: 8 */
+
 var oldCount = $('.range-cross-repo-pair').find('a.select-menu-item').length,
-    paused = false
+    paused = false,
     isOrdered = [
         false,
         false
@@ -13,15 +15,11 @@ var oldCount = $('.range-cross-repo-pair').find('a.select-menu-item').length,
  * @param {int} maxAttempts - max attempts
  * @param {int} count - attempt iterator
  */
-var waitForEl = async (selector, maxAttempts = 10, count) => {
+var waitForEl = async (selector, maxAttempts = 10, count = 0) => {
     if ($(selector).length) {
         return;
     } else {
         setTimeout(async () => {
-            if (!count) {
-                count = 0;
-            }
-
             count++;
             
             if (count < maxAttempts) {
@@ -47,7 +45,7 @@ var getElementValue = async (el, selector) => {
         default: // attribute
             return el.attr(selector);
     }
-}
+};
 
 /**
  * Process the dropdowns and reorder branches
@@ -97,7 +95,7 @@ var process = async () => {
     });
 
     paused = false;
-}
+};
 
 /**
  * Listen for the branch dropdowns being opened
@@ -119,7 +117,7 @@ var listen = async (currentCount) => {
             await listen($('.range-cross-repo-pair').find('a.select-menu-item').length);
         }
     }, 1000);
-}
+};
 
 var init = async () => {
     let settings = await getSettings();

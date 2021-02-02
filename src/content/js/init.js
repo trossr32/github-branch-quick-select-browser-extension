@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 var port = browser.runtime.connect({name: 'init'});
 
 var init = async () => {

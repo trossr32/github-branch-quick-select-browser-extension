@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 /**
  * A setting
  * @typedef {Object} Setting
@@ -39,7 +41,7 @@ var log = async (content) => {
     }
 
     console.log(content);
-}
+};
 
 /*
 * Log old and new values when an item in a storage area is changed
@@ -52,7 +54,7 @@ var logStorageChange = async (changes, area) => {
         await log(['Old value: ', changes[item].oldValue]);
         await log(['New value: ', changes[item].newValue]);
     }
-}
+};
 
 browser.storage.onChanged.addListener(logStorageChange);
 

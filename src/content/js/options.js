@@ -1,3 +1,5 @@
+/* jshint esversion: 8 */
+
 /**
  * Remove a branch from the settings
  * @param {string} branchId - identifier for this branch
@@ -67,7 +69,7 @@ var initialiseBasicForm = async (settings) => {
                             })
                     )
                 )
-            )
+            );
     });
 
     $('#generalOptionsForm')
@@ -97,12 +99,12 @@ var initialiseBasicForm = async (settings) => {
                                 .append(
                                     $(`<button id="delete_${id}" class="btn btn-outline-danger" type="button" data-branch-id="${id}"><i class="fas fa-trash"></i></button>`)
                                         .on('click', async (e) => {
-                                            log([e.currentTarget, $(e.currentTarget)])
+                                            log([e.currentTarget, $(e.currentTarget)]);
                                             await deleteBranch($(e.currentTarget).attr('data-branch-id'));
                                         })
                                 )
                             )
-                        )
+                        );
                     })
             )
         );
@@ -166,6 +168,6 @@ $(async () => {
             }
 
             $(this).removeClass('show active');
-        })
-    })
+        });
+    });
 });
