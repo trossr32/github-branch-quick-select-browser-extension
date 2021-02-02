@@ -12,7 +12,7 @@ This is an extension for Chrome, Microsoft Edge and Firefox that allows the sett
 
 [Extension on the Microsoft Edge add-ons store](https://microsoftedge.microsoft.com/addons/detail/hiagopcofjbjkbfbbaikhkoekfdoeipk)
 
-[Add-on on the Firefox add-ons store](https://addons.mozilla.org/en-GB/firefox/addon/sonarr-radarr-lidarr-search/)
+[Add-on on the Firefox add-ons store](https://addons.mozilla.org/en-GB/firefox/addon/github-pull-request-branch-pin/)
 
 Once installed in your browser go to the options page and configure the extension.
 
