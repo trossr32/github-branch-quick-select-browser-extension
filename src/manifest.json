@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "GitHub pull request branch quick select",
+  "name": "GitHub branch quick select",
   "description": "Reorders branch drop-downs on a GitHub pull request by moving optional favourite branches to the top of the list.",
-  "version": "1.0.1.0",
+  "version": "1.0.2.0",
   "browser_action": {
     "default_icon": "content/assets/images/gprbqs128.png",
     "default_popup": "popup.html"
@@ -23,7 +23,8 @@
   },
   "background": {
     "scripts": [
-      "content/js/jquery-3.5.1.min.js",
+      "browser-polyfill.min.js",
+      "content/js/jquery.min.js",
       "content/js/core.js",
       "eventPage.js"
     ],
@@ -36,7 +37,8 @@
         "*://github.com/*"
       ],
       "js": [
-        "content/js/jquery-3.5.1.min.js",
+        "browser-polyfill.min.js",
+        "content/js/jquery.min.js",
         "content/js/core.js",
         "content/js/init.js"
       ]

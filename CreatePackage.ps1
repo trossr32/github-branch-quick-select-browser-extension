@@ -13,30 +13,16 @@ if (!(Test-path $publish)) {
 }
 
 # build Firefox add on
-$addon = Resolve-Path -LiteralPath "FirefoxAddOn/"
+$addon = Resolve-Path -LiteralPath "dist/"
 	
 npm i -g web-ext
 
-web-ext build -s $addon -a $publish -o --filename "github-pull-request-branch-quick-select-firefox-{version}.zip"
+web-ext build -s $addon -a $publish -o --filename "github-branch-quick-select-{version}.zip"
 
 Set-Location $publish
 
-$zip = Get-Childitem -Include *firefox* -File -Recurse -ErrorAction SilentlyContinue
+$zip = Get-Childitem -Include *zip* -File -Recurse -ErrorAction SilentlyContinue
 
 Copy-Item -Path $zip -Destination ($zip.FullName -replace "zip", "xpi") -Force
 
-# build Chrome zip
 Set-Location $root
-
-# get package version from Firefox zip
-$version = ''
-if ($zip -match '.+(?<Version>\d+\.\d+\.\d+\.\d+)\.zip') {
-	$version = $Matches.Version
-}
-
-$extension = Resolve-Path -LiteralPath "ChromiumExtension/"
-$zip = Join-Path $publish "github-pull-request-branch-quick-select-chromium-$version.zip"
-
-Add-Type -assembly "system.io.compression.filesystem"
-
-[io.compression.zipfile]::CreateFromDirectory($extension, $zip)

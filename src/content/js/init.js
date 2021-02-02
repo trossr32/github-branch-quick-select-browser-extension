@@ -1,11 +1,7 @@
-// post the current url
-
 var port = browser.runtime.connect({name: 'init'});
 
-var init = function() {
+var init = async () => {
     port.postMessage({ url: window.location.href });
 };
 
-$(function () {
-    init();
-});
+init();
