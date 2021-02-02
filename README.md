@@ -16,6 +16,21 @@ This is an extension for Chrome, Microsoft Edge and Firefox that allows the sett
 
 Once installed in your browser go to the options page and configure the extension.
 
-# Create package
+# Development process
 
-A Powershell script and batch files that execute that PS script are included but these simply zip the ChromiumExtension directory or run web-ext build against the FirefoxAddOn directory, as that's all that's required to publish this to the Chrome Web Store, Microsoft Edge Addons and Firefox Addons sites.
+This project uses grunt to build debug or release deployments. Run npm install in the project folder first.
+
+```
+Set-Location [checkout dir]\github-branch-quick-select-browser-extension
+npm i
+```
+then
+```
+grunt debug
+```
+or
+```
+grunt release
+```
+
+Either way a dist/ directory will be created in the project root, but with the release config web-ext will be run to create the compressed packages.
