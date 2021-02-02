@@ -106,7 +106,7 @@ module.exports = function (grunt) {
                 ],
                 tasks: ['debug'],
                 options: {
-                    spawn: false,
+                    //spawn: false,
                 },
             }
         },
@@ -121,7 +121,12 @@ module.exports = function (grunt) {
         }
     });
 
-    // Default task(s).
-    grunt.registerTask('debug', ['clean:debug', 'sass', 'copy', 'cssmin']);
+    // debug group task
+    grunt.registerTask('debug', ['jshint', 'clean:debug', 'sass', 'copy', 'cssmin']);
+
+    // release group task
     grunt.registerTask('release', ['clean:release', 'sass', 'copy:release', 'uglify', 'cssmin', 'shell:ps']);
+
+    // review group task
+    grunt.registerTask('review', ['clean:release', 'sass', 'copy:release', 'uglify', 'cssmin']);
 };
