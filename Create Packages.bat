@@ -1,1 +1,1 @@
-Powershell.exe -File CreatePackage.ps1
+grunt release
